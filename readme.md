@@ -52,3 +52,12 @@ Crie na raíz um arquivo chamado .pre-commit-config.yaml e dentro dele coloque o
                 "--load-plugins=pylint.extensions.docparams" # Load an extension
               ]
 ```
+
+## Especificando as dependências
+Para criar um arquivo que especifique as dependências que estão sendo usadas no projeto, basta rodar o comando: 
+
+```
+  .venv\Scripts\pip3 freeze > requirements.txt
+```
+
+Isso vai criar um arquivo na raíz do projeto com todas as dependências que estão sendo usadas e suas respectivas versões!
