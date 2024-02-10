@@ -37,18 +37,18 @@ Crie na raíz um arquivo chamado .pre-commit-config.yaml e dentro dele coloque o
 
 ```
     repos:
-  - repo: your-uri-repo
-    hooks:
-      - id: pylint
-        name: pylint
-        entry: pylint
-        language: system
-        types: [python]
-        args:
-          [
-            "-rn", # Only display messages
-            "-sn", # Don't display the score
-            "--rcfile=.pylintrc", # Link to yout config file
-            "--load-plugins=pylint.extensions.docparams" # Load an extension
-          ]
+      - repo: local
+        hooks:
+          - id: pylint
+            name: pylint
+            entry: pylint
+            language: system
+            types: [python]
+            args:
+              [
+                "-rn", # Only display messages
+                "-sn", # Don't display the score
+                "--rcfile=.pylintrc", # Link to yout config file
+                "--load-plugins=pylint.extensions.docparams" # Load an extension
+              ]
 ```
